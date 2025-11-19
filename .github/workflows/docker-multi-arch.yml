@@ -7,8 +7,7 @@ on:
       - "v*.*.*"
 
 env:
-  # Image name in GHCR. You can change this if you want.
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/docker-buildx-for-multi-arch-images
+  IMAGE_NAME: ghcr.io/raghavachari93/docker-buildx-for-multi-arch-images
 
 jobs:
   build-and-push:
@@ -45,3 +44,4 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
+
